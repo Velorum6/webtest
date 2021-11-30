@@ -31,7 +31,7 @@ body {
 .neon-button{
     position: center;
     text-align: center;
-    transform: translateY(200%);
+    transform: translateY(420%);
     font-size:4rem;
     display: inline-block;
     text-decoration: none;
@@ -78,7 +78,7 @@ body {
 .neon-button:hover,
 .neon-button:focus {
     background: rgb(77, 39, 247);
-    color: rgb(0, 5, 150);
+    color: rgb(0, 5, 100);
     text-shadow: none;
 }
 
