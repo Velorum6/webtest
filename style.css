@@ -22,7 +22,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-stroke: 1px white;
-    transform: translateY(250%)
+    transform: translateY(150%)
 }
 
 .neon-button{
