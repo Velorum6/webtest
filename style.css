@@ -5,34 +5,85 @@
 .header{
     min-height: 100vh;
     width: 100%;
+    font-family:Arial;
     background-image: url(images/Senku\ Ferroviario.jpg);
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: center;
 }
+
 .text-center
 {
     font-size: 5em;
-    margin:0;
-    padding:0;
     text-align: center;
     font-family: 'arial';
     position: center;
-    top: 50%;
-    Left: 50%;
     background: linear-gradient(to right,rgba(0,100,50,1),rgba(50,0,100,1));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-stroke: 1px white;
-    animation: gradient 5s ease infinite;
     transform: translateY(250%)
 }
 
-@keyframes gradient{
-    0%, 100%{
-        background-position:0% 50%;
-    }
-    50%{
-        background-position:100% 50%;
-    }
+.neon-button{
+    position: center;
+    font-size:4rem;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(77, 39, 247);
+    border: rgb(77, 39, 247) 4px solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+
+    text-shadow:
+     0 0 0.125em rgb(77, 39, 247),
+     0 0 0.25em currentColor;
+    
+    box-shadow: inset 0 0 0.5em 0 rgb(77, 39, 247), 0 0 0.5em 0 rgb(77, 39, 247);
+    position: relative;
+}
+
+.neon-button::before{
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background: rgb(77, 39, 247);
+    top: 100%;
+    left:0;
+    width:100%;
+    height:100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.7;
+}
+
+.neon-button:after{
+  content: '';
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em rgb(77, 39, 247);
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    background: rgb(77, 39, 247);
+    color: rgb(0, 5, 150);
+    text-shadow: none;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before{
+    opacity: 1;
+
+}
+.neon-button:hover::after,
+.neon-button:focus::after{
+    opacity: 1;
+
 }
